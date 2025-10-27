@@ -1,0 +1,30 @@
+input {
+    all: unset;
+    font-family: var(--font-primary);
+    font-size: 2.5em;
+    font-weight: 200;
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid var(--element-color-input);
+    color: var(--text-color-input);
+    outline: none;
+    width: 700px;
+    padding: 0.2em 0.5em;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    letter-spacing: 0.05em;
+    caret-color: var(--caret-color-input);
+    position: relative;
+
+    &::placeholder {
+        color: var(--text-color-input-placeholder);
+        font-weight: 200;
+        font-size: 0.7em;
+    }
+
+    &:focus {
+        border-bottom-color: var(--element-color-input-focus);
+        letter-spacing: 0.1em;
+    }
+    
+}

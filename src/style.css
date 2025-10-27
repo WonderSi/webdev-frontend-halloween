@@ -1,0 +1,40 @@
+:root {
+  --bg-primary: rgb(40, 40, 40);
+  --text-color-input: rgb(245, 191, 121);
+  --text-color-input-placeholder: rgb(60, 60, 60);
+  --caret-color-input: rgb(120, 120, 120);
+  --element-color-input: rgb(80, 80, 80);
+  --element-color-input-focus: rgb(100, 100, 100);
+  --mobile-max: 767px;
+  --tablet-min: 768px;
+  --tablet-max: 1023px;
+  --desktop-min: 1024px;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+  --text-7xl: 4.5rem;
+  --text-8xl: 6rem;
+  --text-9xl: 8rem;
+  --font-primary: Raleway, Roboto, Helvetica, Arial, sans-serif;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg-primary);
+}
+
+/*# sourceMappingURL=style.css.map */
