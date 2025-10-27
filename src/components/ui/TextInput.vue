@@ -1,13 +1,15 @@
 <template>
     <input 
-        type="text" 
+        type="text"
+        :value="modalValue"
         :placeholder="placeholder"
     />
 </template>
 
 <script setup lang="ts">
     interface Props {
-        placeholder?: string
+        modalValue: string
+        placeholder: string
     }
 
     const props = withDefaults(defineProps<Props>(), {
