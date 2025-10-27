@@ -1,20 +1,29 @@
 <template>
     <input 
         type="text"
-        :value="modalValue"
+        :value="modelValue"
         :placeholder="placeholder"
     />
 </template>
 
 <script setup lang="ts">
     interface Props {
-        modalValue: string
+        modelValue: string
         placeholder: string
     }
 
     const props = withDefaults(defineProps<Props>(), {
-        placeholder: 'enter word...'
+        placeholder: 'Enter the word'
     })
+
+    const emit = defineEmits<{
+    'update:modelValue': [value: string]
+    }>()
+
+    const handleInput = (event: Event): void => {
+        const target = event.target as HTMLInputElement
+        emit('update:modelValue', target.value)
+    }
 
 </script>                                                                       
 

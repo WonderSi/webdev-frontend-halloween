@@ -1,14 +1,35 @@
 <template>
   <div id="app" class="container">
-    <Input/>
+    <TextInput
+      v-model="inputText"
+      placeholder="Enter the word"
+    />
+
+    <ScreamerBoo
+      :is-active="activeScreamer === 'бу'"
+    />
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref} from 'vue'
-import Input from './components/ui/TextInput.vue';
+import { ref, watch } from 'vue'
+import TextInput from './components/ui/TextInput.vue';
+import ScreamerBoo from './components/screamers/ScreamerBoo.vue'
+import { TRIGGER_WORDS } from './utils/constants';
+import type { TriggerWord } from './types/index'
 
 const inputText = ref<string>('')
+const activeScreamer = ref<TriggerWord | ''>('')
+
+watch(inputText, (newValue: string) => {
+  const lowerValue = newValue.toLowerCase().trim()
+  for (const word of TRIGGER_WORDS) {
+    if (lowerValue.includes(word)) {
+      activeScreamer.value = word
+      console.log(word)
+    }
+  }
+})
 
 </script>
 
