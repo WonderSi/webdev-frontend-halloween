@@ -2,6 +2,7 @@
     <ScreamerBase
         :is-active="isActive"
         overlay-name="screamer-boo"
+        @close="emit('close')"
     >
     </ScreamerBase>
 </template>

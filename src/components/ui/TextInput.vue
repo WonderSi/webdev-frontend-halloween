@@ -26,7 +26,7 @@
         emit('update:modelValue', target.value)
     }
 
-</script>                                                                       
+</script>
 
 <style scoped>
     @import '../../styles/components/_input.scss';

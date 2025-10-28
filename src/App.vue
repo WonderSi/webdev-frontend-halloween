@@ -7,30 +7,37 @@
 
     <ScreamerBoo
       :is-active="activeScreamer === 'бу'"
-      
+      @close="closeScreamer"
     />
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, watch } from 'vue'
-import TextInput from './components/ui/TextInput.vue';
-import ScreamerBoo from './components/screamers/ScreamerBoo.vue'
-import { TRIGGER_WORDS } from './utils/constants';
-import type { TriggerWord } from './types/index'
+  import { ref, watch } from 'vue'
+  import TextInput from './components/ui/TextInput.vue';
+  import ScreamerBoo from './components/screamers/ScreamerBoo.vue'
+  import { TRIGGER_WORDS } from './utils/constants';
+  import type { TriggerWord } from './types/index'
 
-const inputText = ref<string>('')
-const activeScreamer = ref<TriggerWord | ''>('')
+  const inputText = ref<string>('')
+  const activeScreamer = ref<TriggerWord | ''>('')
 
-watch(inputText, (newValue: string) => {
-  const lowerValue = newValue.toLowerCase().trim()
-  for (const word of TRIGGER_WORDS) {
-    if (lowerValue.includes(word)) {
-      activeScreamer.value = word
-      console.log(word)
-    }
+  const closeScreamer = ():void => {
+    activeScreamer.value = ''
+    inputText.value = ''
   }
-})
+
+  watch(inputText, (newValue: string) => {
+    const lowerValue = newValue.toLowerCase().trim()
+    for (const word of TRIGGER_WORDS) {
+      if (lowerValue.includes(word)) {
+        activeScreamer.value = word
+        setTimeout(closeScreamer, 3000)
+        console.log(word)
+        break
+      }
+    }
+  })
 
 </script>
 

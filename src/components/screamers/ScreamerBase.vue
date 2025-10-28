@@ -4,6 +4,7 @@
             v-if="isActive"
             class="screamer-overlay"
             :class="overlayName"
+            @click="handleClose"
 
         >
             <div class="screamer-content">
@@ -21,6 +22,14 @@
 
     defineProps<Props>()
 
+    const emit = defineEmits<{
+        close: []
+    }>()
+
+    const handleClose = (): void => {
+        emit('close')
+    }
+
 </script>                                                                       
 
 <style scoped>
@@ -34,6 +43,7 @@
     justify-content: center;
     align-items: center;
     z-index: 9999;
+    cursor: pointer;
 }
 
 .screamer-boo {
