@@ -15,12 +15,12 @@
       @close="closeScreamer"
     />
 
-    <!-- <ScreamerPumpkin
+    <screamerGhost
       :is-active="activeScreamer === 'призрак'"
       @close="closeScreamer"
-    />
+    /> 
 
-    <ScreamerPumpkin
+    <!--<ScreamerPumpkin
       :is-active="activeScreamer === 'мумия'"
       @close="closeScreamer"
     />
@@ -62,6 +62,7 @@
   import TextInput from './components/ui/TextInput.vue';
   import ScreamerBoo from './components/screamers/ScreamerBoo.vue'
   import ScreamerPumpkin from './components/screamers/ScreamerPumpkin.vue'
+  import ScreamerGhost from './components/screamers/ScreamerGhost.vue'
   import { TRIGGER_WORDS } from './utils/constants';
   import type { TriggerWord } from './types/index'
 
