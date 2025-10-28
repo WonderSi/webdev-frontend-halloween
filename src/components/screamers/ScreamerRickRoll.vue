@@ -32,7 +32,7 @@ const emit = defineEmits<{
 
 const handleVideoEnded = (): void => {
     const video = event.target as HTMLVideoElement;
-    if (video.currentTime >= 9) {
+    if (video.currentTime >= 8.5) {
         emit('close');
     }
 };
