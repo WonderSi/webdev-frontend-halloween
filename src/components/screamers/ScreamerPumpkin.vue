@@ -42,7 +42,7 @@ const emit = defineEmits<{
     border-radius: 70%/110%;
     position: relative;
     z-index: 1;
-    animation: float 3s infinite;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 
     .texture {
         height: 10.8em;
@@ -157,6 +157,28 @@ const emit = defineEmits<{
             border-left: 1em solid #401d03;
         }
     }
+
+    &:hover {
+        animation: scale 1.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+    10% {
+        transform: scale(2.5);
+    }
+    20% {
+        transform: scale(1.5);
+    }
+    30% {
+        transform: scale(2.5);
+    }
+    100% {
+        transform: scale(2.5);
+    }
 }
 
 @keyframes float {
@@ -166,16 +188,6 @@ const emit = defineEmits<{
 
     50% {
         transform: translateY(-10%);
-    }
-}
-
-@keyframes zoom {
-    100% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(0.8);
     }
 }
 </style>
