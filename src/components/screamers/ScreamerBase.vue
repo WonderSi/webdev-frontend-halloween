@@ -51,7 +51,9 @@
 }
 
 .screamer-pumpkin {
-    background: radial-gradient(circle, #424242ff, #000000ff);
+    background: #281818ff;
+    /* background: radial-gradient(circle, #201e1eff, #281818ff); */
+}
 }
 
 </style>
