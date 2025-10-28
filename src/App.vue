@@ -9,6 +9,51 @@
       :is-active="activeScreamer === 'бу'"
       @close="closeScreamer"
     />
+
+    <ScreamerPumpkin
+      :is-active="activeScreamer === 'тыква'"
+      @close="closeScreamer"
+    />
+
+    <!-- <ScreamerPumpkin
+      :is-active="activeScreamer === 'призрак'"
+      @close="closeScreamer"
+    />
+
+    <ScreamerPumpkin
+      :is-active="activeScreamer === 'мумия'"
+      @close="closeScreamer"
+    />
+
+    <ScreamerPumpkin
+      :is-active="activeScreamer === 'ведьма'"
+      @close="closeScreamer"
+    />
+
+    <ScreamerPumpkin
+      :is-active="activeScreamer === 'зомби'"
+      @close="closeScreamer"
+    />
+
+    <ScreamerPumpkin
+      :is-active="activeScreamer === 'скелет'"
+      @close="closeScreamer"
+    />
+
+    <ScreamerPumpkin
+      :is-active="activeScreamer === 'паук'"
+      @close="closeScreamer"
+    />
+
+    <ScreamerPumpkin
+      :is-active="activeScreamer === 'череп'"
+      @close="closeScreamer"
+    />
+
+    <ScreamerPumpkin
+      :is-active="activeScreamer === 'конфета'"
+      @close="closeScreamer"
+    /> -->
   </div>
 </template>
 
@@ -16,6 +61,7 @@
   import { ref, watch } from 'vue'
   import TextInput from './components/ui/TextInput.vue';
   import ScreamerBoo from './components/screamers/ScreamerBoo.vue'
+  import ScreamerPumpkin from './components/screamers/ScreamerPumpkin.vue'
   import { TRIGGER_WORDS } from './utils/constants';
   import type { TriggerWord } from './types/index'
 
@@ -32,7 +78,7 @@
     for (const word of TRIGGER_WORDS) {
       if (lowerValue.includes(word)) {
         activeScreamer.value = word
-        setTimeout(closeScreamer, 3000)
+        // setTimeout(closeScreamer, 3000)
         console.log(word)
         break
       }

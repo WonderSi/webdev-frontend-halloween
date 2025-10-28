@@ -8,7 +8,7 @@
 
         >
             <div class="screamer-content">
-
+                <slot name='content'></slot>
             </div>
         </div>  
     </Transition>
@@ -49,4 +49,9 @@
 .screamer-boo {
     background: radial-gradient(circle, #ff0000, #8b0000);
 }
+
+.screamer-pumpkin {
+    background: radial-gradient(circle, #424242ff, #000000ff);
+}
+
 </style>
