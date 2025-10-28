@@ -36,7 +36,6 @@ const emit = defineEmits<{
 
 <style scoped lang="scss">
 .spooky {
-    font-size: 2em;
     margin: 10% auto;
     width: 80%;
     height: 80%;
@@ -50,6 +49,7 @@ const emit = defineEmits<{
         background: #f2fbf1;
         border-top-left-radius: 90px;
         border-top-right-radius: 90px;
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 
         &:before,
         &:after {
@@ -125,6 +125,9 @@ const emit = defineEmits<{
                 background: #f2fbf1;
                 border-radius: 50%;
             }
+        }
+        &:hover {
+            transform: scale(4);
         }
     }
 }
