@@ -10,5 +10,6 @@ export const TRIGGER_WORDS: readonly TriggerWord[] = [
     'скелет',
     'паук',
     'череп',
-    'конфета'
+    'конфета',
+    '404'
 ] as const

@@ -15,7 +15,7 @@
       @close="closeScreamer"
     />
 
-    <screamerGhost
+    <ScreamerGhost
       :is-active="activeScreamer === 'призрак'"
       @close="closeScreamer"
     /> 
@@ -54,6 +54,12 @@
       :is-active="activeScreamer === 'конфета'"
       @close="closeScreamer"
     /> -->
+
+    <ScreamerRickRoll
+      :is-active="activeScreamer === '404'"
+      @close="closeScreamer"
+    />
+
   </div>
 </template>
 
@@ -63,6 +69,7 @@
   import ScreamerBoo from './components/screamers/ScreamerBoo.vue'
   import ScreamerPumpkin from './components/screamers/ScreamerPumpkin.vue'
   import ScreamerGhost from './components/screamers/ScreamerGhost.vue'
+  import ScreamerRickRoll from './components/screamers/ScreamerRickRoll.vue'
   import { TRIGGER_WORDS } from './utils/constants';
   import type { TriggerWord } from './types/index'
 
