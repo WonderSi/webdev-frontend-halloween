@@ -3,6 +3,7 @@
         type="text"
         :value="modelValue"
         :placeholder="placeholder"
+        @input="handleInput"
     />
 </template>
 

@@ -3,20 +3,20 @@
         <div
             v-if="isActive"
             class="screamer-overlay"
-            :class="OverlayName"
+            :class="overlayName"
 
         >
             <div class="screamer-content">
 
             </div>
-        </div>
+        </div>  
     </Transition>
 </template>
 
 <script setup lang="ts">
     interface Props {
         isActive: boolean
-        OverlayName: string
+        overlayName: string
     }
 
     defineProps<Props>()
@@ -34,5 +34,9 @@
     justify-content: center;
     align-items: center;
     z-index: 9999;
+}
+
+.screamer-boo {
+    background: radial-gradient(circle, #ff0000, #8b0000);
 }
 </style>

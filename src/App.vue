@@ -7,6 +7,7 @@
 
     <ScreamerBoo
       :is-active="activeScreamer === 'бу'"
+      
     />
   </div>
 </template>

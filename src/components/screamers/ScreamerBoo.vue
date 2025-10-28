@@ -1,17 +1,13 @@
 <template>
     <ScreamerBase
         :is-active="isActive"
-        transition-name="screamer-zoom"
-        overlay-class="screamer-red"
-        text-animation-class="shake"
-        @close="emit('close')"
+        overlay-name="screamer-boo"
     >
-        <template #emoji>😱 БУ!</template>
-        <template #text>Испугался?</template>
     </ScreamerBase>
 </template>
 
 <script setup lang="ts">
+import ScreamerBase from './ScreamerBase.vue';
 
 interface Props {
     isActive: boolean
