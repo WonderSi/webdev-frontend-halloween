@@ -50,6 +50,7 @@ const emit = defineEmits<{
         border-top-left-radius: 90px;
         border-top-right-radius: 90px;
         transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        transform: scale(2);
 
         &:before,
         &:after {
@@ -126,9 +127,9 @@ const emit = defineEmits<{
                 border-radius: 50%;
             }
         }
-        &:hover {
-            transform: scale(4);
-        }
+        // &:hover {
+        //     transform: scale(4);
+        // }
     }
 }
 

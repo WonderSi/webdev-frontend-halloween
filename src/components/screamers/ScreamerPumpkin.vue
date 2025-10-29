@@ -158,28 +158,28 @@ const emit = defineEmits<{
         }
     }
 
-    &:hover {
-        animation: scale 1.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-    }
+    // &:hover {
+    //     animation: scale 1.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    // }
 }
 
-@keyframes scale {
-    0% {
-        transform: scale(1);
-    }
-    10% {
-        transform: scale(2.5);
-    }
-    20% {
-        transform: scale(1.5);
-    }
-    30% {
-        transform: scale(2.5);
-    }
-    100% {
-        transform: scale(2.5);
-    }
-}
+// @keyframes scale {
+//     0% {
+//         transform: scale(1);
+//     }
+//     10% {
+//         transform: scale(2.5);
+//     }
+//     20% {
+//         transform: scale(1.5);
+//     }
+//     30% {
+//         transform: scale(2.5);
+//     }
+//     100% {
+//         transform: scale(2.5);
+//     }
+// }
 
 @keyframes float {
     100% {
