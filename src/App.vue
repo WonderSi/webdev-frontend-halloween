@@ -14,17 +14,17 @@
 
 
         <ScreamerBoo
-            :is-active="activeScreamer === 'бу'"
+            :is-active="activeScreamer === 'бу' || activeScreamer === 'boo'"
             @close="closeScreamer"
         />
 
         <ScreamerPumpkin
-            :is-active="activeScreamer === 'тыква'"
+            :is-active="activeScreamer === 'тыква' || activeScreamer === 'pumpkin'"
             @close="closeScreamer"
         />
 
         <ScreamerGhost
-            :is-active="activeScreamer === 'призрак'"
+            :is-active="activeScreamer === 'призрак' || activeScreamer === 'ghost'"
             @close="closeScreamer"
         /> 
         <!--
@@ -49,7 +49,7 @@
         />-->
 
         <ScreamerSpider
-            :is-active="activeScreamer === 'паук'"
+            :is-active="activeScreamer === 'паук' || activeScreamer === 'spider'"
             @close="closeScreamer"
         />
 
