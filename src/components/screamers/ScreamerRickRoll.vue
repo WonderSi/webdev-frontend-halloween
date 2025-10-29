@@ -6,18 +6,20 @@
     >
         <template #content>
             <video 
+                ref="videoRef"
                 autoplay 
                 playsinline
                 id="bg-video"
-                @timeupdate="handleVideoEnded"
+                @ended="handleVideoEnded"
             >
-                <source src="../../assets/video/rick-roll.mp4" type="video/mp4" />
+                <source src="../../assets/video/jetpack-joyride-dance.mp4" type="video/mp4" />
             </video>
         </template>
     </ScreamerBase>
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
 import ScreamerBase from "./ScreamerBase.vue";
 
 interface Props {
@@ -30,11 +32,13 @@ const emit = defineEmits<{
     close: [];
 }>();
 
+const videoRef = ref<HTMLVideoElement | null>(null);
+
 const handleVideoEnded = (): void => {
-    const video = event.target as HTMLVideoElement;
-    if (video.currentTime >= 8.5) {
-        emit('close');
+    if (videoRef.value) {
+        videoRef.value.pause();
     }
+    emit('close');
 };
 </script>
 
