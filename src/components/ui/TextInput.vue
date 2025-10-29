@@ -4,6 +4,7 @@
         :value="modelValue"
         :placeholder="placeholder"
         @input="handleInput"
+        name="main-input"
     />
 </template>
 
