@@ -60,4 +60,9 @@
     /* background: radial-gradient(circle, #1e1e20ff, #181a28ff); */
 }
 
+.screamer-spider {
+    background: #281818
+    /* background: radial-gradient(circle, #1e1e20ff, #181a28ff); */
+}
+
 </style>
