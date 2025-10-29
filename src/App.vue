@@ -37,12 +37,12 @@
             :is-active="activeScreamer === 'ведьма'"
             @close="closeScreamer"
         />
-
-        <ScreamerPumpkin
-            :is-active="activeScreamer === 'зомби'"
+        -->
+        <ScreamerZombie
+            :is-active="activeScreamer === 'зомби' || activeScreamer === 'zombie'"
             @close="closeScreamer"
         />
-
+        <!--
         <ScreamerPumpkin
             :is-active="activeScreamer === 'скелет'"
             @close="closeScreamer"
@@ -78,6 +78,7 @@ import LabelConfimation from './components/ui/LabelConfimation.vue';
 import ScreamerBoo from './components/screamers/ScreamerBoo.vue'
 import ScreamerPumpkin from './components/screamers/ScreamerPumpkin.vue'
 import ScreamerGhost from './components/screamers/ScreamerGhost.vue'
+import ScreamerZombie from './components/screamers/ScreamerZombie.vue';
 import ScreamerSpider from './components/screamers/ScreamerSpider.vue'
 import ScreamerRickRoll from './components/screamers/ScreamerRickRoll.vue'
 import { TRIGGER_WORDS } from './utils/constants';
