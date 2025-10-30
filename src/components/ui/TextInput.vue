@@ -14,9 +14,7 @@
         placeholder: string
     }
 
-    const props = withDefaults(defineProps<Props>(), {
-        placeholder: 'Enter the word'
-    })
+    defineProps<Props>()
 
     const emit = defineEmits<{
     'update:modelValue': [value: string]
