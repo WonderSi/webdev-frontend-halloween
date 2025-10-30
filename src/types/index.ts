@@ -1,5 +1,4 @@
 export type TriggerWord = 
-'бу' | 'boo' |
 'тыква' | 'pumpkin' |
 'призрак' | 'ghost' |
 'мумия' | 'mummy' |

@@ -1,9 +1,13 @@
 <template>
     <div id="app" class="container">
+        <BackgroundWords :is-paused="isInputFocused"/>
+
         <TextInput
             v-model="inputText"
             placeholder="Enter the word"
             @keyup.enter="acceptWord"
+            @focus="isInputFocused = true"
+            @blur="isInputFocused = false"
         />
 
         <Transition name="fade">
@@ -11,12 +15,6 @@
               <LabelConfimation />
             </div>
         </Transition>
-
-
-        <ScreamerBoo
-            :is-active="activeScreamer === 'бу' || activeScreamer === 'boo'"
-            @close="closeScreamer"
-        />
 
         <ScreamerPumpkin
             :is-active="activeScreamer === 'тыква' || activeScreamer === 'pumpkin'"
@@ -50,9 +48,9 @@
 
 <script setup lang="ts">
 import { ref, watch } from 'vue'
+import BackgroundWords from './components/layout/BackgroundWords.vue';
 import TextInput from './components/ui/TextInput.vue';
 import LabelConfimation from './components/ui/LabelConfimation.vue';
-import ScreamerBoo from './components/screamers/ScreamerBoo.vue'
 import ScreamerPumpkin from './components/screamers/ScreamerPumpkin.vue'
 import ScreamerGhost from './components/screamers/ScreamerGhost.vue'
 import ScreamerZombie from './components/screamers/ScreamerZombie.vue';
@@ -64,6 +62,7 @@ import type { TriggerWord } from './types/index'
 const inputText = ref<string>('')
 const activeScreamer = ref<TriggerWord | ''>('')
 const showLabel = ref<boolean>(false)
+const isInputFocused = ref<boolean>(false)
 
 const closeScreamer = ():void => {
     activeScreamer.value = ''
