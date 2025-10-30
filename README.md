@@ -8,7 +8,10 @@
 Интерактивное веб-приложение для Хэллоуина
 
 ## Установка / Запуск
+### Деплой
+https://webdev-frontend-halloween.vercel.app/
 
+### Для личного пользования
 1. Клонируйте репозиторий:
 ```
 git clone https://github.com/WonderSi/webdev-frontend-halloween.git
