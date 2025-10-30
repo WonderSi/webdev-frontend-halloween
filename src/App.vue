@@ -65,6 +65,8 @@
 
         <ScreamerRickRoll
             :is-active="activeScreamer === '404'"
+            :text-start-time="12.5" 
+            :text-end-time="20"
             @close="closeScreamer"
         />
 
