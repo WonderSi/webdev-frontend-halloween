@@ -27,43 +27,18 @@
             :is-active="activeScreamer === 'призрак' || activeScreamer === 'ghost'"
             @close="closeScreamer"
         /> 
-        <!--
-        <ScreamerMummy
-            :is-active="activeScreamer === 'мумия'"
-            @close="closeScreamer"
-        />
 
-        <ScreamerPumpkin
-            :is-active="activeScreamer === 'ведьма'"
-            @close="closeScreamer"
-        />
-        -->
         <ScreamerZombie
             :is-active="activeScreamer === 'зомби' || activeScreamer === 'zombie'"
             @close="closeScreamer"
         />
-        <!--
-        <ScreamerPumpkin
-            :is-active="activeScreamer === 'скелет'"
-            @close="closeScreamer"
-        />-->
 
         <ScreamerSpider
             :is-active="activeScreamer === 'паук' || activeScreamer === 'spider'"
             @close="closeScreamer"
         />
 
-        <!--<ScreamerPumpkin
-            :is-active="activeScreamer === 'череп'"
-            @close="closeScreamer"
-        />
-
-        <ScreamerPumpkin
-            :is-active="activeScreamer === 'конфета'"
-            @close="closeScreamer"
-        /> -->
-
-        <ScreamerRickRoll
+        <ScreamerJetpack
             :is-active="activeScreamer === '404'"
             :text-start-time="12.5" 
             :text-end-time="20"
@@ -82,7 +57,7 @@ import ScreamerPumpkin from './components/screamers/ScreamerPumpkin.vue'
 import ScreamerGhost from './components/screamers/ScreamerGhost.vue'
 import ScreamerZombie from './components/screamers/ScreamerZombie.vue';
 import ScreamerSpider from './components/screamers/ScreamerSpider.vue'
-import ScreamerRickRoll from './components/screamers/ScreamerRickRoll.vue'
+import ScreamerJetpack from './components/screamers/ScreamerJetpack.vue'
 import { TRIGGER_WORDS } from './utils/constants';
 import type { TriggerWord } from './types/index'
 

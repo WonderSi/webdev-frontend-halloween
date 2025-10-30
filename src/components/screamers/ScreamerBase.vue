@@ -46,28 +46,20 @@
     cursor: pointer;
 }
 
-.screamer-boo {
-    background: radial-gradient(circle, #ff0000, #8b0000);
-}
-
 .screamer-pumpkin {
     background: #281818ff;
-    /* background: radial-gradient(circle, #201e1eff, #281818ff); */
 }
 
 .screamer-ghost {
     background: #181a28ff
-    /* background: radial-gradient(circle, #1e1e20ff, #181a28ff); */
 }
 
 .screamer-zombie {
     background: #281818
-    /* background: radial-gradient(circle, #1e1e20ff, #181a28ff); */
 }
 
 .screamer-spider {
     background: #281824
-    /* background: radial-gradient(circle, #1e1e20ff, #181a28ff); */
 }
 
 </style>
